@@ -34,7 +34,7 @@ pip3 install -r requirements.txt
 
 9. The script can be customized with following environment variables
 | Variable Name | Description | Possible Values |
-| -------- | ------- | ------- |
+|--------|-------|-------|
 | LOCAL_FILE_NAME | It will be used as temporary storage for the content of an S3 file | <anything>.txt |
 | SEARCH_TYPE | It will be use to change the search type of search string in a file. If it is LOOSE then the script will loosely match the string, i.e. if we searching for cook in a file, but instead of cook, cooked is written in the file. In case of loose matching it will match the string. In case of STRICT match it will use regex to match the exact work | LOOSE or STRICT|
 
