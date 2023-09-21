@@ -33,6 +33,7 @@ pip3 install -r requirements.txt
 ```
 
 9. The script can be customized with following environment variables
+
 | Variable Name | Description | Possible Values |
 |--------|-------|-------|
 | LOCAL_FILE_NAME | It will be used as temporary storage for the content of an S3 file | <anything>.txt |
