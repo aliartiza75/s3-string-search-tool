@@ -2,10 +2,13 @@ import os
 import re
 import boto3
 import atexit
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # GLOBAL VARS
-LOCAL_FILE_NAME = "local_file.txt"
-SEARCH_TYPE = "LOOSE"   # STRICT or LOOSE
+LOCAL_FILE_NAME = os.getenv('LOCAL_FILE_NAME')
+SEARCH_TYPE = os.getenv('SEARCH_TYPE')
 
 
 def search_str_in_file(file_path, search_str):
@@ -57,7 +60,9 @@ def traverse_s3_bucket(bucket_name, search_str):
     # Iterate over the objects
     for obj in response.get('Contents', []):
         # Print the object's key (S3 path)
-        if "txt" in obj['Key']:
+
+        # checkinf if the object has txt as extension
+        if ".txt" in obj['Key']:
             download_file(s3_client, bucket_name, file_path=obj['Key'])
             word_exists, number_of_occurances = search_str_in_file(LOCAL_FILE_NAME, search_str)
 
@@ -89,7 +94,7 @@ def traverse_s3_buckets(buckets_name_list):
 
 def onExitApp():
     """
-    It will be called at the end of the execution and remove the local file
+    It will be called at the end of the execution and remove the local file that will store the content of the file
     """
     if os.path.isfile(LOCAL_FILE_NAME):
         os.remove(LOCAL_FILE_NAME)
