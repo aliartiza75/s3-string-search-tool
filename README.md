@@ -54,7 +54,9 @@ To run it locally:
 To run it on EC2:
 
 &nbsp; a. Create an IAM role.
+
 &nbsp; b. Attach the policy created above with the role.
+
 &nbsp; c. Attach the role to EC2 instance.
 
 8. Install the requirements.
