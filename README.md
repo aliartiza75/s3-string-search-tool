@@ -41,9 +41,9 @@ In this policy, i have used wildcard because i want the script to search a strin
 
 To run it locally:
 
-&nbsp; a. Attach the Policy created above with IAM Group.
+- a. Attach the Policy created above with IAM Group.
 
-&nbsp; b. Create an IAM user.
+- b. Create an IAM user.
 
 &nbsp; c. Attach the IAM user to IAM Group.
 
@@ -58,6 +58,7 @@ To run it on EC2:
 &nbsp; b. Attach the policy created above with the role.
 
 &nbsp; c. Attach the role to EC2 instance.
+
 
 8. Install the requirements.
 ```bash
