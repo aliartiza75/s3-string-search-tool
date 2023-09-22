@@ -102,4 +102,6 @@ Manually
 git commit -m "[<branch-name>] add files"
 ```
 
+Automatically
+
 In order to add the branch name automatically follow this [tutorial](https://medium.com/@aliartiza75/add-git-branch-name-to-each-commit-3acb60ab6bc9). It will also enable branch restriction on the code base, details are available in the tutorial.
