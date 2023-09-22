@@ -41,23 +41,23 @@ In this policy, i have used wildcard because i want the script to search a strin
 
 To run it locally:
 
-  2.a. Attach the Policy created above with IAM Group.
+  a. Attach the Policy created above with IAM Group.
 
-  2.b. Create an IAM user.
+  b. Create an IAM user.
 
-  2.c. Attach the IAM user to IAM Group.
+  c. Attach the IAM user to IAM Group.
 
-  2.d. Generate IAM Access Key and Secret.
+  d. Generate IAM Access Key and Secret.
 
-  2.e. Configure IAM creds on your system.
+  e. Configure IAM creds on your system.
 
 To run it on EC2:
 
-  2.f. Create an IAM role.
+  a. Create an IAM role.
 
-  2.g. Attach the policy created above with the role.
+  b. Attach the policy created above with the role.
 
-  2.h. Attach the role to EC2 instance.
+  c. Attach the role to EC2 instance.
 
 
 8. Install the requirements.
